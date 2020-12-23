@@ -22,7 +22,7 @@ def print_student(student):
 	print('Группа:',student['group'])
 	print('Степень:', student['stepen'])
 	print('Дата:', student['date'])
-	getStatus(student)
+	get_status(student)
 
 
 def all():
