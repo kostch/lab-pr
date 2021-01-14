@@ -23,9 +23,8 @@ function Las(i) {
     a = parseInt(a);
     let b = a + 10
     let res = result.shift()
-    console.log(res + getRandomIntInclusive(a, b))
     let f = getRandomIntInclusive(a,b)
-    console.log(getRandomIntInclusive(a,b), 'tets getrandom')
+    console.log('Результат регулирования: ', res + f)
     let fe = res + f
     result.unshift(fe)
     C(i)
@@ -47,6 +46,6 @@ function C(i){
     rl.question('Представляем что это крутилка которая, например, добавляет или убавляет обороты, поэтому пишем число либо положительное, либо отрицательное ', (answer) => {
         // TODO: Log the answer in a database
         rl.close();
-        console.log(`Результат регулирования: ${Las(answer)}`);
+        Las(answer)
     });
 }
