@@ -21,7 +21,12 @@ function Get(i) {
 function Las(i) {
     a = i
     a = parseInt(a);
-    let b = a + 10
+    const c = 10
+    const add = (a, c) => a + c
+    const sub = (a, c) => a - c
+    const ops = [add, sub];
+    const randOp = (a, c) => ops[Math.floor(Math.random() * ops.length)](a, c)
+    let b = randOp(a,c)
     let res = result.shift()
     let f = getRandomIntInclusive(a,b)
     console.log('Результат регулирования: ', res + f)
